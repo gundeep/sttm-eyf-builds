@@ -1,0 +1,271 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body><title>SikhiToTheMax EYF 2026 Release</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one reading column. Release header, the feature video, two download cards, what changed, install steps, verification evidence, footer. */
+  :root {
+    --paper: #FAF7F2;
+    --ink: #1B2A4A;
+    --ink-soft: #4A5670;
+    --saffron: #E8850C;
+    --saffron-deep: #C26E06;
+    --card: #FFFFFF;
+    --card-edge: #E7E0D4;
+    --wash: #F3EDE2;
+    --ok: #2E7D4F;
+    --ok-wash: #E9F3ED;
+    --warn-wash: #FBF1E1;
+    --warn-edge: #EBD5AE;
+    --code-bg: #22304F;
+    --code-ink: #F5EBDD;
+    --player-edge: rgba(27,42,74,0.18);
+    --display: "Mukta Mahee", "Source Sans 3", "Segoe UI", sans-serif;
+    --body: "Source Sans 3", "Segoe UI", -apple-system, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #131C30; --ink: #EDE8DF; --ink-soft: #A8B0C2;
+      --saffron: #F59E2D; --saffron-deep: #F5B15C;
+      --card: #1B2742; --card-edge: #2C3A5C; --wash: #182338;
+      --ok: #6FBF92; --ok-wash: #1A2E27; --warn-wash: #2A2536; --warn-edge: #4A3E2A;
+      --code-bg: #0D1424; --code-ink: #E8DFCE; --player-edge: rgba(255,255,255,0.12);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #131C30; --ink: #EDE8DF; --ink-soft: #A8B0C2;
+    --saffron: #F59E2D; --saffron-deep: #F5B15C;
+    --card: #1B2742; --card-edge: #2C3A5C; --wash: #182338;
+    --ok: #6FBF92; --ok-wash: #1A2E27; --warn-wash: #2A2536; --warn-edge: #4A3E2A;
+    --code-bg: #0D1424; --code-ink: #E8DFCE; --player-edge: rgba(255,255,255,0.12);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+  a { color: var(--saffron-deep); }
+  .shell { max-width: 1000px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 72px; }
+
+  header.hero { display: grid; gap: 10px; margin-bottom: 28px; }
+  .onkar { font-family: var(--display); color: var(--saffron); font-size: 40px; line-height: 1; }
+  .eyebrow { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; color: var(--ink-soft); font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+  .tag { font-family: var(--mono); text-transform: none; letter-spacing: 0; background: var(--wash); border: 1px solid var(--card-edge); border-radius: 6px; padding: 2px 8px; color: var(--ink); font-weight: 500; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 0; text-wrap: balance; }
+  .sub { color: var(--ink-soft); max-width: 64ch; margin: 0; }
+  .sub strong { color: var(--ink); }
+
+  h2 { font-family: var(--display); font-weight: 700; font-size: 24px; margin: 56px 0 14px; }
+  h3 { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+
+  .player { background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--player-edge); box-shadow: 0 24px 60px rgba(10,16,32,0.25); }
+  video { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; }
+  .chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin-top: 12px; }
+  .chapter { display: grid; grid-template-columns: auto 1fr; gap: 0 10px; align-items: baseline; text-align: left; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--card-edge); background: var(--card); color: var(--ink); font: inherit; font-size: 15px; cursor: pointer; min-width: 0; }
+  .chapter time { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--saffron-deep); font-size: 13px; }
+  .chapter strong { font-weight: 600; overflow-wrap: anywhere; }
+  .chapter:hover, .chapter:focus-visible { border-color: var(--saffron); outline: none; }
+  .chapter:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--saffron) 40%, transparent); }
+  .chapter.active { border-color: var(--saffron); box-shadow: inset 0 0 0 1px var(--saffron); }
+  .videonote { color: var(--ink-soft); font-size: 14.5px; margin: 10px 0 0; }
+
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--card-edge); border-radius: 10px; padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .os { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .os .name { font-family: var(--display); font-weight: 700; font-size: 22px; }
+  .os .req { color: var(--ink-soft); font-size: 14px; text-align: right; }
+  .file { font-family: var(--mono); font-size: 13.5px; color: var(--ink-soft); overflow-wrap: anywhere; }
+  .dl { display: block; text-align: center; text-decoration: none; background: var(--saffron); color: #FFFFFF; font-weight: 700; font-size: 17px; padding: 13px 18px; border-radius: 8px; margin-top: 4px; }
+  .dl:hover { background: var(--saffron-deep); }
+  .dl:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .dl small { display: block; font-weight: 400; font-size: 13px; opacity: .92; }
+  .hash { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; margin-top: 4px; }
+  .hash label { grid-column: 1 / -1; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  .hash code { font-family: var(--mono); font-size: 12px; background: var(--wash); border: 1px solid var(--card-edge); border-radius: 6px; padding: 6px 8px; overflow-wrap: anywhere; line-height: 1.4; min-width: 0; }
+  .copy { font: inherit; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--card-edge); background: var(--card); color: var(--ink); cursor: pointer; white-space: nowrap; }
+  .copy:hover { border-color: var(--saffron); }
+  .copy:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 0; padding: 0; list-style: none; }
+  @media (max-width: 720px) { .features { grid-template-columns: 1fr; } }
+  .features li { background: var(--card); border: 1px solid var(--card-edge); border-radius: 10px; padding: 16px 18px; min-width: 0; }
+  .features b { display: block; font-family: var(--display); font-weight: 700; font-size: 18px; margin-bottom: 2px; }
+  .features p { margin: 0; font-size: 15.5px; }
+  .features .where { display: block; margin-top: 8px; color: var(--ink-soft); font-size: 13.5px; }
+  .features .where::before { content: "Where: "; font-weight: 600; }
+  .fixes { margin: 14px 0 0; padding-left: 20px; }
+  .fixes li { margin: 4px 0; }
+
+  .install { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 860px) { .install { grid-template-columns: 1fr; } }
+  .install > div { min-width: 0; }
+  ol.steps { margin: 10px 0 0; padding: 0; list-style: none; counter-reset: step; }
+  ol.steps > li { counter-increment: step; position: relative; padding: 0 0 16px 42px; }
+  ol.steps > li::before { content: counter(step); position: absolute; left: 0; top: 1px; width: 28px; height: 28px; border-radius: 50%; background: var(--wash); color: var(--saffron-deep); font-family: var(--display); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+  ol.steps > li:not(:last-child)::after { content: ""; position: absolute; left: 13.5px; top: 32px; bottom: 2px; width: 1px; background: var(--card-edge); }
+  .callout { background: var(--warn-wash); border: 1px solid var(--warn-edge); border-radius: 8px; padding: 10px 14px; font-size: 15px; margin-top: 8px; }
+  code { font-family: var(--mono); font-size: 14px; background: var(--wash); padding: 1px 6px; border-radius: 4px; }
+  .cmd { display: block; font-family: var(--mono); font-size: 14px; background: var(--code-bg); color: var(--code-ink); padding: 10px 14px; border-radius: 6px; margin-top: 8px; overflow-x: auto; white-space: pre; }
+
+  .verified { background: var(--ok-wash); border-radius: 10px; padding: 22px 24px; }
+  .verified .badge { display: inline-flex; align-items: center; gap: 8px; color: var(--ok); font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: .06em; font-family: var(--display); }
+  .verified p { margin: 10px 0 0; font-size: 15.5px; }
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 720px) { .shots { grid-template-columns: 1fr; } }
+  .shots figure { margin: 0; min-width: 0; }
+  .shots img { width: 100%; max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--card-edge); display: block; background: #000; }
+  .shots figcaption { font-size: 13.5px; color: var(--ink-soft); margin-top: 6px; }
+
+  .limits { margin: 0; padding-left: 20px; }
+  .limits li { margin: 6px 0; }
+
+  footer { margin-top: 64px; color: var(--ink-soft); font-size: 14px; border-top: 1px solid var(--card-edge); padding-top: 18px; }
+  @media (prefers-reduced-motion: no-preference) { .chapter, .copy, .dl { transition: border-color 120ms ease, background-color 120ms ease; } }
+</style>
+
+<div class="shell">
+  <header class="hero">
+    <div class="onkar">ੴ</div>
+    <div class="eyebrow"><span class="tag">v9.3.2-eyf</span><span>Released 25 August 2026</span><span>Windows and Mac</span></div>
+    <h1>SikhiToTheMax, EYF 2026 edition</h1>
+    <p class="sub">A customised build of the SikhiToTheMax shabad-display app for the <strong>European Youth Festival 2026</strong>. It installs as a separate app called <strong>SikhiToTheMax Dev</strong>, so it never touches or replaces an official SikhiToTheMax installation on the same computer.</p>
+  </header>
+
+  <div class="player">
+    <video id="v" controls playsinline preload="metadata" poster="poster.jpg" src="sttm-eyf-features.mp4"></video>
+  </div>
+  <div class="chapters" id="chapters">
+    <button class="chapter" type="button" data-t="0"><time>0:00</time><strong>Intro</strong></button>
+    <button class="chapter" type="button" data-t="4.4"><time>0:04</time><strong>Describe it (English)</strong></button>
+    <button class="chapter" type="button" data-t="16.8"><time>0:17</time><strong>Transliteration</strong></button>
+    <button class="chapter" type="button" data-t="25.2"><time>0:25</time><strong>Readable keyboard</strong></button>
+    <button class="chapter" type="button" data-t="33.6"><time>0:34</time><strong>Recent shabads</strong></button>
+    <button class="chapter" type="button" data-t="42"><time>0:42</time><strong>Song of the Khalsa</strong></button>
+    <button class="chapter" type="button" data-t="52.4"><time>0:52</time><strong>Search never freezes</strong></button>
+    <button class="chapter" type="button" data-t="61.8"><time>1:02</time><strong>Fixes and builds</strong></button>
+  </div>
+  <p class="videonote">75 second feature tour. Every app screen in it is a real capture of this build running on a Mac, recorded 8 October 2026.</p>
+
+  <h2>Download</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="os"><span class="name">Windows</span><span class="req">64-bit Windows 10 or 11</span></div>
+      <span class="file">SikhiToTheMaxDev-Setup-9.3.2-x64.exe · 425 MB</span>
+      <a class="dl" href="https://github.com/gundeep/sttm-eyf-builds/releases/download/v9.3.2-eyf/SikhiToTheMaxDev-Setup-9.3.2-x64.exe">Download for Windows<small>installer, no admin rights needed</small></a>
+      <div class="hash">
+        <label for="sha-win">SHA-256</label>
+        <code id="sha-win">79f823ea1f2e7a9b9f4fc7b49af3ff7ec6a37206b415b61c10cf6b7db8db2212</code>
+        <button class="copy" type="button" data-copy="sha-win">Copy</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="os"><span class="name">Mac</span><span class="req">Apple Silicon (M1 or newer)</span></div>
+      <span class="file">SikhiToTheMax-Dev-9.3.2-arm64.dmg · 455 MB</span>
+      <a class="dl" href="https://github.com/gundeep/sttm-eyf-builds/releases/download/v9.3.2-eyf/SikhiToTheMax-Dev-9.3.2-arm64.dmg">Download for Mac<small>disk image, drag to Applications</small></a>
+      <div class="hash">
+        <label for="sha-mac">SHA-256</label>
+        <code id="sha-mac">cbeb3c1f7cc1abe023bc3aa40b0fb409b0e348ed06ee3501ac7814a3873a5cb7</code>
+        <button class="copy" type="button" data-copy="sha-mac">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>What is new in this build</h2>
+  <ul class="features">
+    <li><b>Describe it (English)</b><p>A phonetic search mode that matches how a line sounds, what it means and its first-letter shape, so spelling does not matter. Typing “jo to prem” finds ਜਉ ਤਉ ਪ੍ਰੇਮ ਖੇਲਣ ਕਾ ਚਾਉ.</p><span class="where">Search header, English, then Describe it (English)</span></li>
+    <li><b>Transliteration everywhere</b><p>Roman transliteration under the Gurmukhi in search results and in the shabad pane, in every search mode.</p><span class="where">Search results, shabad pane, Recent Shabads</span></li>
+    <li><b>Readable Gurmukhi keyboard</b><p>Every on-screen key shows the letter, its sound and the physical key that types it.</p><span class="where">Keyboard button next to the search box</span></li>
+    <li><b>Recent shabads</b><p>A toolbar list of opened shabads, newest first, with transliteration, ang, writer and raag. Saved to disk, so it survives a restart. Replaying an entry moves it to the top.</p><span class="where">Left toolbar, clock icon</span></li>
+    <li><b>Song of the Khalsa as a ceremony</b><p>Loads into the shabad pane, steps with the arrow keys, shows in History and sizes with Quick Tools, like Anand Sahib does.</p><span class="where">Quick Insert tray, next to Anand Sahib</span></li>
+    <li><b>Search that never freezes</b><p>Queries run in the main process and the phonetic index is pre-warmed in background slices. The first smart search used to freeze the window for over five seconds; typing now stays fluid.</p><span class="where">Everywhere search is used</span></li>
+  </ul>
+  <ul class="fixes">
+    <li><strong>Fixed:</strong> a custom background image can be removed again (Settings, Theme).</li>
+    <li><strong>Fixed:</strong> a fresh install no longer crashes while the search database is still downloading.</li>
+  </ul>
+
+  <h2>Install</h2>
+  <div class="install">
+    <div>
+      <h3>Windows</h3>
+      <ol class="steps">
+        <li>Download the installer with the button above and open it from your Downloads folder.</li>
+        <li>Windows will likely show a blue <b>“Windows protected your PC”</b> screen, because this community build is not code-signed.
+          <div class="callout">Click <b>More info</b>, then <b>Run anyway</b>. This screen is expected for this build. If you would rather double-check first, scan the file with your antivirus before running it.</div></li>
+        <li>Follow the installer: <b>Next</b>, then <b>Install</b>. It installs for your user account only, so no administrator password is needed.</li>
+        <li>Launch <b>SikhiToTheMax Dev</b> from the Start menu.</li>
+        <li>On first launch the app downloads the shabad database. Leave it connected to the internet for a few minutes; search becomes available once the download finishes.</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Mac</h3>
+      <ol class="steps">
+        <li>Download the disk image with the button above and open it.</li>
+        <li>Drag <b>SikhiToTheMax Dev</b> into the <b>Applications</b> folder shortcut, then eject the disk image.</li>
+        <li>First open: in Applications, <b>right-click the app, Open, Open</b>.
+          <div class="callout">If macOS says the app <b>“is damaged and can’t be opened”</b> or “cannot be checked for malicious software”, that is macOS quarantining an unsigned community build; the file is fine. Open the <b>Terminal</b> app, paste this line, press return, then open the app again:
+            <span class="cmd">xattr -cr "/Applications/SikhiToTheMax Dev.app"</span></div></li>
+        <li>On first launch the app downloads the shabad database. Leave it connected to the internet for a few minutes.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>Tested before sharing</h2>
+  <div class="verified">
+    <span class="badge">✓ Verified working</span>
+    <p>Both installers were installed and launched from scratch, and the running app was checked programmatically: the interface confirmed fully loaded, title <code>SikhiToTheMax</code>, version 9.3.2. Windows was tested on a clean Windows Server 2022 machine on GitHub Actions. Mac was tested on an Apple Silicon Mac, installed from this exact DMG. The checksums above match the files on the release page.</p>
+    <div class="shots">
+      <figure><img src="verify-windows.jpg" alt="SikhiToTheMax Dev running on Windows after a fresh install" width="1400" height="1050"><figcaption>Windows: freshly installed and launched on a clean machine</figcaption></figure>
+      <figure><img src="verify-mac.jpg" alt="SikhiToTheMax Dev running on a Mac after installing from the DMG" width="1400" height="878"><figcaption>Mac: installed from the DMG and launched</figcaption></figure>
+    </div>
+  </div>
+
+  <h2>Good to know</h2>
+  <ul class="limits">
+    <li><strong>Not code-signed.</strong> Windows SmartScreen and macOS Gatekeeper will warn once. The install steps above show how to get past the warning.</li>
+    <li><strong>Apple Silicon only.</strong> There is no build for Intel Macs.</li>
+    <li><strong>Needs internet on first launch</strong> to download the shabad database, the same as the official app.</li>
+    <li><strong>Runs alongside the official app.</strong> Your existing SikhiToTheMax installation and its settings are left untouched.</li>
+  </ul>
+
+  <footer>
+    Based on <a href="https://github.com/KhalisFoundation/sttm-desktop">SikhiToTheMax desktop</a> by the Khalis Foundation (OSL 3.0). This is an unofficial community build for EYF 2026; the modified source is available on request. All downloads are hosted on the <a href="https://github.com/gundeep/sttm-eyf-builds/releases/tag/v9.3.2-eyf">GitHub release page</a>.
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var v = document.getElementById('v');
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('.chapter'));
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        v.currentTime = parseFloat(b.getAttribute('data-t'));
+        v.play().catch(function () {});
+      });
+    });
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, current = null;
+      buttons.forEach(function (b) { if (t >= parseFloat(b.getAttribute('data-t')) - 0.05) current = b; });
+      buttons.forEach(function (b) { b.classList.toggle('active', b === current); });
+    });
+
+    function selectText(el) {
+      try {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      } catch (e) {}
+    }
+    Array.prototype.slice.call(document.querySelectorAll('.copy')).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = document.getElementById(btn.getAttribute('data-copy'));
+        var text = target ? target.textContent.trim() : '';
+        var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+        var fail = function () { selectText(target); btn.textContent = 'Selected'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fail);
+        } else { fail(); }
+      });
+    });
+  })();
+</script>
+</body></html>
